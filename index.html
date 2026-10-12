@@ -4,66 +4,254 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego M. Bendezú Robalino - CS499 ePortfolio</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 900px;">
-    <h1>Diego M. Bendezú Robalino</h1>
-    <h2>CS499 Computer Science Capstone ePortfolio</h2>
-    <hr>
-    
-    <p>Welcome to my CS499 ePortfolio showcasing my growth and artifacts across software engineering, algorithms, and databases.</p>
+    <style>
+        /* Base Page Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
 
-    <section style="margin-top: 40px;">
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Header Card */
+        .header-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 6px solid #0d6efd;
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            color: #1e293b;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            margin: 0;
+            color: #475569;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        /* Section Cards */
+        .card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #0f172a;
+            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* YouTube Container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #000;
+            margin-top: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Tabs Navigation */
+        .tab-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: -1px;
+            border-bottom: 2px solid #cbd5e1;
+            padding-left: 5px;
+        }
+
+        .tab-btn {
+            background-color: #e2e8f0;
+            border: none;
+            outline: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #475569;
+            cursor: pointer;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .tab-btn:hover {
+            background-color: #cbd5e1;
+            color: #0f172a;
+        }
+
+        .tab-btn.active {
+            background-color: #ffffff;
+            color: #0d6efd;
+            border-top: 3px solid #0d6efd;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.03);
+        }
+
+        /* Tab Content Panels */
+        .tab-content {
+            display: none;
+            background-color: #ffffff;
+            padding: 30px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Links & Buttons */
+        .btn-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: #0d6efd;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-link:hover {
+            background-color: #0b5ed7;
+        }
+
+        a {
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Section -->
+    <div class="header-card">
+        <h1>Diego M. Bendezú Robalino</h1>
+        <h2>CS499 Computer Science Capstone ePortfolio</h2>
+    </div>
+
+    <!-- Professional Self-Assessment (Always Visible) -->
+    <div class="card">
+        <h3>Professional Self-Assessment</h3>
+        <p>Welcome to my CS499 ePortfolio. Throughout my Bachelor of Science in Computer Science with a concentration in Software Engineering, I have developed a comprehensive foundation in modern software development, secure coding principles, algorithmic optimization, and database architecture. This portfolio showcases my ability to transform legacy codebases into robust, scalable, and secure applications. Across my artifacts, I demonstrate proficiency in designing maintainable object-oriented systems, implementing efficient data structures with optimized search complexities, and establishing persistent data storage solutions that satisfy all five computer science program learning outcomes.</p>
+    </div>
+
+    <!-- Code Review Video (Always Visible) -->
+    <div class="card">
         <h3>Code Review Video</h3>
         <p>This video provides a comprehensive code review of the initial artifact, covering architecture, potential areas for improvement, and planned enhancements.</p>
         
-        <!-- Responsive YouTube Embed Container -->
-        <div style="position: relative; padding-bottom: 56.125%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
-            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        <div class="video-container">
+            <iframe 
                 src="https://www.youtube.com/embed/ltOBo_2LLnU" 
                 title="CS499 Code Review Video" 
-                frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
         </div>
         
-        <p style="margin-top: 10px;">
-            <small>If the video fails to load, you can also view it directly on YouTube: 
-            <a href="https://www.youtube.com/watch?v=ltOBo_2LLnU" target="_blank">Watch on YouTube</a></small>
+        <p style="margin-top: 15px; font-size: 0.9rem;">
+            If the video fails to load, you can also view it directly on YouTube: 
+            <a href="https://www.youtube.com/watch?v=ltOBo_2LLnU" target="_blank">Watch on YouTube</a>
         </p>
-    </section>
+    </div>
 
-    <!-- Software Design and Engineering Section -->
-    <section style="margin-top: 50px;">
+    <!-- Enhancement Tabs Header -->
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="openTab(event, 'software-design')">Software Design</button>
+        <button class="tab-btn" onclick="openTab(event, 'algorithms')">Algorithms & Data Structures</button>
+        <button class="tab-btn" onclick="openTab(event, 'databases')">Databases</button>
+    </div>
+
+    <!-- Tab 1: Software Design -->
+    <div id="software-design" class="tab-content active">
         <h3>Software Design and Engineering (Enhancement One)</h3>
         <p>The artifact I selected for my software design and engineering enhancement is an investment client management application that I initially constructed in my CS 410 Software Reverse Engineering course during the summer of 2026. I created this program by disassembling a compiled binary executable into assembly language, studying its memory layout and execution stack, and translating that logic back into executable C++ source code. The software functions as an investment firm portal that handles user authentication, displays client financial records, and allows updating client service selections through an interactive console menu. I chose to include this artifact in my ePortfolio because it demonstrates a complete architectural transformation from fragile, legacy code into a secure, modern software system. By removing shared memory variables and refactoring the codebase into an object-oriented design, I showcased my ability to evaluate architectural choices and build maintainable software. The enhancement significantly improved the artifact by encapsulating customer data inside dedicated domain classes (Client, AuthenticationManager, and ClientManager), separating class declarations from implementations across modular header and source files, and establishing a clean main() controller.</p>
         <p>Through this enhancement, I demonstrated specific software engineering skills in object-oriented programming, data encapsulation, separation of concerns, and defensive input validation. In the original version, credentials and client details resided in global scope, which exposed sensitive plaintext data throughout the program's lifecycle. I improved security and system stability by isolating member variables behind private access modifiers, implementing stream manipulators for formatted table output, and writing recovery checks that handle invalid user inputs without crashing. These improvements allowed me to fully meet three core course outcomes. I satisfied Course Outcome 3 by applying object-oriented design principles to reorganize loose variables into structured models while evaluating architectural trade-offs. I fulfilled Course Outcome 4 by adopting industry-standard layout practices with modular header and implementation files. Lastly, I supported Course Outcome 5 by developing a security mindset that removed global memory vulnerabilities and prevented direct administrative output exposure.</p>
-        <p>Refactoring this codebase was an iterative learning process where I gained practical experience maintaining existing software behavior while overhauling underlying architecture. A primary challenge I faced was resolving build errors caused by header dependency cycles and managing #include directives in Visual Studio. To overcome these hurdles, I carefully followed my pseudocode and planning documents from Module One, treating them as a blueprint for function boundaries and class responsibilities. I incorporated instructor feedback by refining function naming conventions, such as renaming initializeClients() to initializeDefaultClients(), to clearly communicate operational intent and acknowledge temporary data storage until database integration. Additionally, following instructor guidance on code organization helped me establish a clear separation of concerns without prematurely implementing data structure or database logic planned for later milestones. Overall, this process taught me the value of encapsulation and gave me confidence in refactoring legacy software cleanly.</p>
-        <p>
-            <a href="https://github.com/DiegoBendezuR/DiegoBendezuR.github.io/tree/main/Enhancement-One-Software-Design-Engineering" target="_blank">View Software Design Enhancement Code and Files on GitHub</a>
-        </p>
-    </section>
+        <p>Refactoring this codebase was an iterative learning process where I gained practical experience maintaining existing software behavior while overhauling underlying architecture. A primary challenge I faced was resolving build errors caused by header dependency cycles and managing #include directives in Visual Studio. To overcome these hurdles, I carefully followed my pseudocode and planning documents from Module One, treating them as a blueprint for function boundaries and class responsibilities. I incorporated instructor feedback by refining function naming conventions—such as renaming initializeClients() to initializeDefaultClients()—to clearly communicate operational intent and acknowledge temporary data storage until database integration. Additionally, following instructor guidance on code organization helped me establish a clear separation of concerns without prematurely implementing data structure or database logic planned for later milestones. Overall, this process taught me the value of encapsulation and gave me confidence in refactoring legacy software cleanly.</p>
+        <a href="https://github.com/DiegoBendezuR/DiegoBendezuR.github.io/tree/main/Enhancement-One-Software-Design-Engineering" target="_blank" class="btn-link">View Software Design Enhancement Code on GitHub</a>
+    </div>
 
-    <!-- Algorithms and Data Structures Section -->
-    <section style="margin-top: 50px;">
+    <!-- Tab 2: Algorithms & Data Structures -->
+    <div id="algorithms" class="tab-content">
         <h3>Algorithms and Data Structures (Enhancement Two)</h3>
-        <p>The artifact I selected for my algorithms and data structures enhancement is the refactored C++ client management application originating from my reverse engineering coursework in CS 410. The initial reconstructed application relied on fixed-size memory structures, loose global variables, and hardcoded conditional branches to manage five client records. This rigid layout forced fixed memory allocation at compile time and created severe scalability bottlenecks, requiring linear scans of O(N) complexity to retrieve or update records. I selected this artifact for my ePortfolio because it highlights my ability to evaluate computational performance limitations and implement efficient data structures and search algorithms. The enhancement improved the artifact by replacing static arrays with a dynamic vector of Client objects, applying standard library sorting routines (sort()), and implementing a binary search algorithm (lower_bound()) to optimize data retrieval.</p>
-        <p>In this enhancement, I demonstrated advanced technical skills in algorithmic complexity analysis, dynamic memory management, vector manipulation, and search optimization. By sorting client records alphabetically by name or numerically by account identifier with O(N log N) complexity, I established an ordered dataset that enabled binary search lookup. Replacing linear scans with binary search reduced search time complexity from O(N) linear time down to O(log N) logarithmic time, allowing lookups to scale efficiently even as the dataset grows. These improvements directly fulfilled two course outcomes. I met Course Outcome 3 by evaluating algorithmic efficiency, balancing memory usage against lookup speed, and selecting optimal algorithms to solve performance bottlenecks. I also supported Course Outcome 4 by implementing C++ standard library vectors and sorting utilities to produce an efficient, professional application that scales smoothly. Additionally, I supported Course Outcome 2 by designing structured flowcharts to communicate my algorithmic decision branches to technical peers.</p>     
-        <p>Enhancing this artifact deepened my understanding of algorithm selection prerequisites and memory manipulation in C++. During development, a major challenge was resolving compiler errors related to 'const' member function qualifiers inside display methods, which restricted object access during sorting operations. Investigating and fixing these qualifier issues taught me how C++ enforces immutability across object references. I incorporated instructor feedback by ensuring that my algorithmic enhancements remained strictly modular, focusing my changes within ClientManager.h and ClientManager.cpp while leaving data models like Client.h intact. I also acted on feedback regarding search prerequisites by embedding the numerical sorting routine (sortById()) directly prior to execution of the update operation (ChangeCustomerChoice()), guaranteeing the dataset is ordered before binary search divides the search space. All planned course outcomes for this category were fully met, reinforcing my ability to analyze Big-O time complexity and optimize real-world software performance.</p>
-        <p>
-            <a href="https://github.com/DiegoBendezuR/DiegoBendezuR.github.io/tree/main/Enhancement-Two-Algorithms-Data-Structures" target="_blank">View Algorithms Enhancement Code and Files on GitHub</a>
-        </p>
-    </section>
+        <p>The artifact I selected for my algorithms and data structures enhancement is the refactored C++ client management application originating from my reverse engineering coursework in CS 410. The initial reconstructed application relied on fixed-size memory structures, loose global variables, and hardcoded conditional branches to manage five client records. This rigid layout forced fixed memory allocation at compile time and created severe scalability bottlenecks, requiring linear scans of O(N) complexity to retrieve or update records. I selected this artifact for my ePortfolio because it highlights my ability to evaluate computational performance limitations and implement efficient data structures and search algorithms. The enhancement improved the artifact by replacing static arrays with a dynamic std::vector of Client objects, applying standard library sorting routines (std::sort()), and implementing a binary search algorithm (std::lower_bound()) to optimize data retrieval.</p>
+        <p>In this enhancement, I demonstrated advanced technical skills in algorithmic complexity analysis, dynamic memory management, vector manipulation, and search optimization. By sorting client records alphabetically by name or numerically by account identifier with O(N log N) complexity, I established an ordered dataset that enabled binary search lookup. Replacing linear scans with binary search reduced search time complexity from O(N) linear time down to O(log N) logarithmic time, allowing lookups to scale efficiently even as the dataset grows. These improvements directly fulfilled two course outcomes. I met Course Outcome 3 by evaluating algorithmic efficiency, balancing memory usage against lookup speed, and selecting optimal algorithms to solve performance bottlenecks. I also supported Course Outcome 4 by implementing C++ standard library vectors and sorting utilities to produce an efficient, professional application that scales smoothly. Furthermore, I supported Course Outcome 2 by designing structured flowcharts to communicate my algorithmic decision branches to technical peers.</p>
+        <p>Enhancing this artifact deepened my understanding of algorithm selection prerequisites and memory manipulation in C++. During development, a major challenge was resolving compiler errors related to const member function qualifiers inside display methods, which restricted object access during sorting operations. Investigating and fixing these qualifier issues taught me how C++ enforces immutability across object references. I incorporated instructor feedback by ensuring that my algorithmic enhancements remained strictly modular, focusing my changes within ClientManager.h and ClientManager.cpp while leaving data models like Client.h intact. I also acted on feedback regarding search prerequisites by embedding the numerical sorting routine (sortById()) directly prior to execution of the update operation (ChangeCustomerChoice()), guaranteeing the dataset is ordered before binary search divides the search space. All planned course outcomes for this category were fully met, reinforcing my ability to analyze Big-O time complexity and optimize real-world software performance.</p>
+        <a href="https://github.com/DiegoBendezuR/DiegoBendezuR.github.io/tree/main/Enhancement-Two-Algorithms-Data-Structures" target="_blank" class="btn-link">View Algorithms Enhancement Code on GitHub</a>
+    </div>
 
-    <!-- Databases Section -->
-    <section style="margin-top: 50px;">
+    <!-- Tab 3: Databases -->
+    <div id="databases" class="tab-content">
         <h3>Databases (Enhancement Three)</h3>
         <p>The artifact I selected for my database enhancement is the C++ client management console application that I originally reconstructed from compiled binary executable code during my software reverse engineering coursework in August 2026. Prior to this enhancement, the program permitted users to log into a portal, view client names, and update service choices, but all data was stored temporarily in runtime memory using hardcoded variables, causing all modifications to reset upon closing. I chose to include this artifact in my ePortfolio because it demonstrates how I transformed a volatile console program into a secure, database-backed application supporting persistent storage and collaborative organizational decision-making. The enhancement significantly improved the artifact by integrating an embedded SQLite database (investment_portal.db) that automatically creates relational tables upon startup, populates default records if empty, and executes full create, read, update, and delete (CRUD) operations so that client profiles and user authentication credentials remain permanently saved across application executions.</p>
-        <p>Through this enhancement, I demonstrated advanced technical skills in database architecture, schema design, SQL transaction management, C++ library integration, and defensive security programming. Moving records out of temporary memory and into a structured database allowed me to write a dedicated database manager class that establishes relational mappings, manages connection strings, and executes parameterized SQL queries that prevent injection vulnerabilities. In addition, I adopted a defensive security mindset by moving administrative login credentials out of hardcoded strings and into a dedicated USERS table, separating user authorization from application logic. To address input validation challenges uncovered during testing, such as stream extraction accepting invalid characters and leaving trailing buffers, I implemented robust helper functions utilizing stringstream line parsing for strict numeric checks. These improvements allowed me to fully meet core course outcomes. I satisfied Course Outcome 1 by establishing persistent data storage that supports reliable collaborative environments and organizational decision-making. I fulfilled Course Outcome 4 by embedding the SQLite library within C++ and designing dedicated manager classes to handle SQL statements and transactions. Lastly, I supported Course Outcome 5 by adopting a defensive security mindset and blocking injection vectors through parameterized queries and strict input stream validation.</p>
-        <p>Reflecting on the process of enhancing this project taught me a great deal about software planning, database configuration, and iterative debugging. A primary challenge I faced was figuring out how to configure, compile, and integrate SQLite within Visual Studio, as I had not previously linked C source files directly into a C++ solution. Researching and structuring header files and build dependencies allowed me to stable database connection. I incorporated instructor feedback and guidance from earlier reviews by ensuring my code maintained modular boundaries and by expanding my implementation to support full CRUD functionality immediately rather than delaying operations. Throughout development, comprehensive testing uncovered subtle input stream vulnerabilities, such as inputs like '2a' causing double menu prints, which I resolved by refining my input validation logic. This iterative process taught me how to refine existing codebases and approach software engineering with a rigorous focus on data persistence, security, and robust error recovery.</p>
-        <p>
-            <a href="https://github.com/DiegoBendezuR/DiegoBendezuR.github.io/tree/main/Enhancement-Three-Databases" target="_blank">View Databases Enhancement Code and Files on GitHub</a>
-        </p>
-    </section>
+        <p>Through this enhancement, I demonstrated advanced technical skills in database architecture, schema design, SQL transaction management, C++ library integration, and defensive security programming. Moving records out of temporary memory and into a structured database allowed me to write a dedicated database manager class that establishes relational mappings, manages connection strings, and executes parameterized SQL queries that prevent injection vulnerabilities. Furthermore, I adopted a defensive security mindset by moving administrative login credentials out of hardcoded strings and into a dedicated USERS table, separating user authorization from application logic. To address input validation challenges uncovered during testing—such as stream extraction accepting invalid characters and leaving trailing buffers—I implemented robust helper functions utilizing stringstream line parsing for strict numeric checks. These improvements allowed me to fully meet core course outcomes. I satisfied Course Outcome 1 by establishing persistent data storage that supports reliable collaborative environments and organizational decision-making. I fulfilled Course Outcome 4 by embedding the SQLite library within C++ and designing dedicated manager classes to handle SQL statements and transactions. Lastly, I supported Course Outcome 5 by adopting a defensive security mindset and blocking injection vectors through parameterized queries and strict input stream validation.</p>
+        <p>Reflecting on the process of enhancing this project taught me a great deal about software planning, database configuration, and iterative debugging. A primary challenge I faced was figuring out how to configure, compile, and integrate SQLite within Visual Studio, as I had not previously linked C source files directly into a C++ solution. Researching and structuring header files and build dependencies allowed me to establish a stable database connection. I incorporated instructor feedback and guidance from earlier reviews by ensuring my code maintained modular boundaries and by expanding my implementation to support full CRUD functionality immediately rather than delaying operations. Throughout development, comprehensive testing uncovered subtle input stream vulnerabilities—such as inputs like '2a' causing double menu prints—which I resolved by refining my input validation logic. This iterative process taught me how to refine existing codebases and approach software engineering with a rigorous focus on data persistence, security, and robust error recovery.</p>
+        <a href="https://github.com/DiegoBendezuR/DiegoBendezuR.github.io/tree/main/Enhancement-Three-Databases" target="_blank" class="btn-link">View Databases Enhancement Code on GitHub</a>
+    </div>
+
+</div>
+
+<!-- JavaScript for Interactive Tabs -->
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+        }
+        
+        // Remove active class from buttons
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        
+        // Show current tab and set button as active
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
 </body>
 </html>
