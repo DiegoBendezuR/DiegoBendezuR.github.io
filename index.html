@@ -35,9 +35,17 @@
 
     <section style="margin-top: 50px;">
         <h3>Software Design and Engineering (Enhancement One)</h3>
-        <p>This section showcases the software design and engineering enhancement applied to the Client Management C++ application, incorporating instructor feedback from Milestone One to improve modularity, architecture, and code organization.</p>
+        <p>The artifact selected for the software design enhancement is an investment client management application originally created during a software reverse engineering course through the disassembly and reconstruction of a compiled binary executable. In its initial state, the program depended on global variables and hardcoded arrays, exposing sensitive data throughout its execution. This enhancement completely restructured the application into a modern, object-oriented architecture by organizing the code into modular header and implementation files, encapsulating customer data within dedicated classes such as Client, AuthenticationManager, and ClientManager, and strengthening input validation and error recovery to improve maintainability and security.</p>
         <p>
-            <a href="Enhancement-One-Software-Design/" target="_blank">View Software Design Enhancement Code and Files</a>
+            <a href="Enhancement-One-Software-Design-Engineering/" target="_blank">View Software Design Enhancement Code and Files</a>
+        </p>
+    </section>
+
+    <section style="margin-top: 50px;">
+        <h3>Algorithms and Data Structures (Enhancement Two)</h3>
+        <p>The artifact for the algorithms and data structures enhancement builds upon the refactored client management application by optimizing data storage and search performance. The initial implementation relied on fixed memory slots and linear scanning, which resulted in a time complexity of O(N). To overcome this performance bottleneck, memory storage was transitioned into a dynamic C++ vector of Client objects, and standard library sorting utilities were applied to organize records alphabetically and numerically with an efficiency of O(N log N). Furthermore, a binary search lookup algorithm (lower_bound) was implemented to replace linear scans, reducing data retrieval complexity to O(log N) and ensuring that search operations scale smoothly as dataset sizes expand.</p>
+        <p>
+            <a href="Enhancement-Two-Algorithms-Data-Structures/" target="_blank">View Algorithms Enhancement Code and Files</a>
         </p>
     </section>
 </body>
