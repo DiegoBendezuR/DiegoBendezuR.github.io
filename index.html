@@ -135,28 +135,82 @@
             display: block;
         }
 
-        /* Screenshot Styling */
-        .screenshot-grid {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        /* Carousel Styling */
+        .carousel-wrapper {
+            margin-top: 30px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
         }
 
-        .screenshot-item img {
+        .carousel-slide {
+            display: none;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
             width: 100%;
-            height: auto;
+            max-height: 500px;
+            object-fit: contain;
             border-radius: 6px;
             border: 1px solid #cbd5e1;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background-color: #000;
         }
 
-        .screenshot-caption {
-            font-size: 0.9rem;
+        .carousel-info {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .carousel-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .carousel-desc {
+            font-size: 0.95rem;
             color: #475569;
-            margin-top: 6px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        .carousel-btn {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.95rem;
             font-weight: 600;
-            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background-color: #0b5ed7;
+        }
+
+        .carousel-counter {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #64748b;
         }
 
         /* Links & Buttons */
@@ -267,47 +321,109 @@
         <p>Through these final implementation steps, I demonstrated advanced technical capabilities in object-oriented software engineering, algorithmic complexity analysis, embedded database management, and defensive security design. By separating class declarations from implementation details across modular header and C++ source files, I maintained clear software boundaries while adding new features. I utilized standard library algorithms (sort) to implement sortByServiceChoice(), providing linearithmic complexity (O(N log N)) when reordering dynamic vectors before executing logarithmic (O(log N)) binary search queries. Additionally, I demonstrated expertise in database operations by maintaining relational data integrity across dynamic SQLite CRUD operations, ensuring that new records and plan updates immediately synchronized with the underlying database file (investment_portal.db) using parameterized SQL queries to prevent injection attacks.</p>
         <p>This final body of work directly fulfills all five program and course learning objectives. I designed and delivered professional-quality written, oral, and visual content by documenting my code with clear, contextual commentary and presenting my project through a structured ePortfolio paired with a peer-facing code review video. I evaluated and communicated algorithmic solutions by articulating time and space complexity trade-offs between sorting routines and binary search execution. I implemented modern computing tools and industry practices by utilizing Visual Studio, Git version control, embedded SQLite C-APIs, and structured C++ design patterns to resolve a real-world software modernization problem. I reflected on and anticipated security concerns by eliminating global memory variables, masking administrative password entries to prevent physical shoulder surfing, hardening input validation loops against buffer malformations, and securing database access against malicious input vectors. Finally, by delivering a well-documented, highly maintainable codebase and public repository, I established communication materials that enable diverse technical and administrative audiences to understand, evaluate, and collaborate on software decision-making in the field of computer science.</p>
 
-<!-- Test Verification Screenshots Section -->
-        <div class="screenshot-grid">
-            <div class="screenshot-item">
+        <!-- Interactive Screenshot Slideshow Carousel Intro -->
+        <h4 style="margin-top: 35px; margin-bottom: 10px; color: #1e293b; font-size: 1.15rem; border-bottom: 1px solid #cbd5e1; padding-bottom: 6px;">
+            Here are some of the enhancements for this project:
+        </h4>
+        
+        <!-- Interactive Screenshot Slideshow Carousel -->
+        <div class="carousel-wrapper">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
                 <img src="Final-Project-Enhancement/Screenshots/Password Protection.png" alt="Password Protection">
-                <div class="screenshot-caption">Password Masking Security Integration</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Password Masking Security Integration</div>
+                    <div class="carousel-desc">The console no longer displays the words for the password when a user enters it.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/New Search By Service.png" alt="New Search By Service">
-                <div class="screenshot-caption">Sorting Menu Featuring Service Choice Option</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Sorting Menu Featuring Service Choice Option</div>
+                    <div class="carousel-desc">Shows the new third option for sorting.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Search by Service Choice.png" alt="Search by Service Choice">
-                <div class="screenshot-caption">Client Roster Sorted by Service Choice Tier</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Client Roster Sorted by Service Choice Tier</div>
+                    <div class="carousel-desc">Shows how the table is sorted by service choice.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Search By Client ID.png" alt="Search By Client ID">
-                <div class="screenshot-caption">Client Roster Sorted by Client ID</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Client Roster Sorted by Client ID</div>
+                    <div class="carousel-desc">Shows how the table is sorted by client ID.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 5 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Search By Client Name.png" alt="Search By Client Name">
-                <div class="screenshot-caption">Client Roster Sorted Alphabetically by Name</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Client Roster Sorted Alphabetically by Name</div>
+                    <div class="carousel-desc">Shows how the table is sorted by client name.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 6 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Adding New Record, Input Verification, Confirmation of Addition.png" alt="Adding New Record">
-                <div class="screenshot-caption">Adding New Record with 4-Tier Service Validation</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Adding New Record</div>
+                    <div class="carousel-desc">Shows the process of adding a new record to the database, as well as, what happens if a user enters wrong input.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 7 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Change Client Choice Operation and Verification.png" alt="Change Client Choice">
-                <div class="screenshot-caption">Updating Client Service Choice Across Tiers</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Updating Client Service Choice Across Tiers</div>
+                    <div class="carousel-desc">Shows the update of changing a client's service choice.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 8 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Functionality Test to Delete Record.png" alt="Delete Record Test">
-                <div class="screenshot-caption">Hardened Deletion Logic and Confirmation Prompt</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Deleting a Record</div>
+                    <div class="carousel-desc">Shows how to complete the process of deleting a record from the database and what happens when wrong input is entered.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 9 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Input Test Case.png" alt="Input Test Case">
-                <div class="screenshot-caption">Stringstream Menu Input Validation Against Malformed Data</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Menu Input Validation Against Malformed Data</div>
+                    <div class="carousel-desc">Shows how the system reacts to incorrect input entered by the user.</div>
+                </div>
             </div>
-            <div class="screenshot-item">
+
+            <!-- Slide 10 -->
+            <div class="carousel-slide">
                 <img src="Final-Project-Enhancement/Screenshots/Wrong Input Test Verification.png" alt="Wrong Input Test Verification">
-                <div class="screenshot-caption">Error Handling for Nonexistent Client ID Lookups</div>
+                <div class="carousel-info">
+                    <div class="carousel-title">Error Handling for Nonexistent Client ID Lookups</div>
+                    <div class="carousel-desc">Explains how the system reacts to incorrect input when trying to change a client's service choice.</div>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="moveSlide(-1)">&#10094; Previous</button>
+                <div class="carousel-counter" id="slideCounter">Slide 1 of 10</div>
+                <button class="carousel-btn" onclick="moveSlide(1)">Next &#10095;</button>
             </div>
         </div>
 
