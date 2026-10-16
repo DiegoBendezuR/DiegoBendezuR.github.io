@@ -432,28 +432,48 @@
 
 </div>
 
-<!-- JavaScript for Interactive Tabs -->
+<!-- JavaScript for Interactive Tabs and Carousel -->
 <script>
     function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         
-        // Hide all tab content
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
             tabcontent[i].classList.remove("active");
         }
         
-        // Remove active class from buttons
         tablinks = document.getElementsByClassName("tab-btn");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].classList.remove("active");
         }
         
-        // Show current tab and set button as active
         document.getElementById(tabName).style.display = "block";
         document.getElementById(tabName).classList.add("active");
         evt.currentTarget.classList.add("active");
+    }
+
+    // Carousel Logic
+    let currentSlideIndex = 0;
+
+    function moveSlide(n) {
+        const slides = document.getElementsByClassName("carousel-slide");
+        const counterText = document.getElementById("slideCounter");
+        
+        currentSlideIndex += n;
+        
+        if (currentSlideIndex >= slides.length) {
+            currentSlideIndex = 0;
+        } else if (currentSlideIndex < 0) {
+            currentSlideIndex = slides.length - 1;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+
+        slides[currentSlideIndex].classList.add("active");
+        counterText.innerText = `Slide ${currentSlideIndex + 1} of ${slides.length}`;
     }
 </script>
 
